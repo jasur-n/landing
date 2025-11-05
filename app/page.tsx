@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
         <Image
           className="dark:invert"
           src="/logo-long.png"
-          alt="Next.js logo"
+          alt="menta logo"
           width={200}
           height={40}
           priority
@@ -25,6 +26,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
+            Demo dostup olish
             <Image
               className="dark:invert"
               src="/logo-strike.png"
@@ -32,8 +34,13 @@ export default function Home() {
               width={16}
               height={16}
             />
-            Demo dostup olish
           </a>
+          <Link
+            className="flex h-12 w-full items-center justify-center gap-2 rounded-full border border-foreground px-5 text-foreground transition-colors hover:bg-foreground hover:text-background md:w-[210px]"
+            href="/contacts"
+          >
+            Biz bilan bog&apos;lanish
+          </Link>
         </div>
       </main>
     </div>
