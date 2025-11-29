@@ -10,7 +10,7 @@ type DeviceType = "android" | "ios" | "desktop" | "loading";
 const ENABLE_EMERGENCY_DOWNLOAD = true;
 
 export default function Apps() {
-  const [deviceType, setDeviceType] = useState<DeviceType>("android");
+  const [deviceType, setDeviceType] = useState<DeviceType>("loading");
 
   useEffect(() => {
     const detectDevice = () => {
@@ -37,7 +37,7 @@ export default function Apps() {
       setDeviceType("desktop");
     };
 
-    // detectDevice();
+    detectDevice();
   }, []);
 
   return (
