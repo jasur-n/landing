@@ -10,7 +10,7 @@ type DeviceType = "android" | "ios" | "desktop" | "loading";
 const ENABLE_EMERGENCY_DOWNLOAD = true;
 
 export default function Apps() {
-  const [deviceType, setDeviceType] = useState<DeviceType>("loading");
+  const [deviceType, setDeviceType] = useState<DeviceType>("android");
 
   useEffect(() => {
     const detectDevice = () => {
@@ -37,7 +37,7 @@ export default function Apps() {
       setDeviceType("desktop");
     };
 
-    detectDevice();
+    // detectDevice();
   }, []);
 
   return (
@@ -53,7 +53,7 @@ export default function Apps() {
             priority
           />
         </Link>
-        <div className="flex flex-col items-start gap-8 text-left w-full">
+        <div className="flex flex-col items-start gap-8 text-left w-full mt-12">
           {/* 1. Mobile app heading */}
           <h1 className="max-w-m text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             Mobil ilova yordamida o&apos;qish yanada qulayroq!
@@ -80,6 +80,30 @@ export default function Apps() {
                         mavjud. Ilovani to&apos;g&apos;ridan-to&apos;g&apos;ri
                         yuklab oling:
                       </p>
+                      <div className="mt-3 p-3 rounded-lg bg-amber-50 dark:bg-amber-950 border border-amber-200 dark:border-amber-800">
+                        <div className="flex gap-2">
+                          <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="flex-shrink-0 text-amber-600 dark:text-amber-400 mt-0.5"
+                          >
+                            <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+                            <path d="M12 9v4" />
+                            <path d="M12 17h.01" />
+                          </svg>
+                          <p className="text-sm text-amber-800 dark:text-amber-200">
+                            <strong>Muhim:</strong> Yangi versiyani
+                            o&apos;rnatishdan oldin, sizda o&apos;rnatilgan
+                            Menta ilovasini o&apos;chirib tashlang.
+                          </p>
+                        </div>
+                      </div>
                       <div className="mt-3">
                         <a
                           href="/downloads/menta_1.0.2(12).apk"
@@ -101,7 +125,7 @@ export default function Apps() {
                             <polyline points="7 10 12 15 17 10" />
                             <line x1="12" y1="15" x2="12" y2="3" />
                           </svg>
-                          <span>APK faylini yuklab olish - 1.0.2 (12)</span>
+                          <span>APK faylini yuklab olish</span>
                         </a>
                       </div>
                     </>
