@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 type DeviceType = "android" | "ios" | "desktop" | "loading";
 
 // Flag for emergency download solution
-const ENABLE_EMERGENCY_DOWNLOAD = true;
+const ENABLE_EMERGENCY_DOWNLOAD = false;
 
 export default function Apps() {
   const [deviceType, setDeviceType] = useState<DeviceType>("loading");
