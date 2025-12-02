@@ -8,6 +8,10 @@ type DeviceType = "android" | "ios" | "desktop" | "loading";
 
 // Flag for emergency download solution
 const ENABLE_EMERGENCY_DOWNLOAD = false;
+const PLAY_MARKET_URL =
+  "https://play.google.com/store/apps/details?id=com.menta.student&pcampaignid=landing";
+const APP_STORE_URL =
+  "https://apps.apple.com/uz/app/menta-student/id6755288411";
 
 export default function Apps() {
   const [deviceType, setDeviceType] = useState<DeviceType>("loading");
@@ -136,7 +140,7 @@ export default function Apps() {
                       </p>
                       <div className="h-[60px] flex items-center justify-start">
                         <a
-                          href="https://play.google.com/store/apps/details?id=com.menta.student&pcampaignid=landing"
+                          href={PLAY_MARKET_URL}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="transition-opacity hover:opacity-80"
@@ -169,7 +173,7 @@ export default function Apps() {
                 </div>
                 <div className="h-[60px] flex items-center justify-start">
                   <a
-                    href="https://apps.apple.com/uz/app/menta-student/id6755288411"
+                    href={APP_STORE_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="transition-opacity hover:opacity-80"
@@ -239,7 +243,7 @@ export default function Apps() {
                   </p>
                   <div className="h-[50px] flex items-center justify-start">
                     <a
-                      href="https://play.google.com/store/apps/details?id=com.menta.app"
+                      href={PLAY_MARKET_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="transition-opacity hover:opacity-80"
