@@ -136,7 +136,7 @@ export default function Apps() {
                       </p>
                       <div className="h-[60px] flex items-center justify-start">
                         <a
-                          href="https://play.google.com/store/apps/details?id=com.menta.app"
+                          href="https://play.google.com/store/apps/details?id=com.menta.student&pcampaignid=landing"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="transition-opacity hover:opacity-80"
@@ -169,7 +169,7 @@ export default function Apps() {
                 </div>
                 <div className="h-[60px] flex items-center justify-start">
                   <a
-                    href="https://apps.apple.com/app/menta/id123456789"
+                    href="https://apps.apple.com/uz/app/menta-student/id6755288411"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="transition-opacity hover:opacity-80"
