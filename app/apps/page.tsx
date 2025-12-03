@@ -219,7 +219,7 @@ export default function Apps() {
                   </p>
                   <div className="h-[50px] flex items-center justify-start">
                     <a
-                      href="https://apps.apple.com/app/menta/id123456789"
+                      href={APP_STORE_URL}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="transition-opacity hover:opacity-80"
