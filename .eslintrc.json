@@ -1,0 +1,62 @@
+{
+  "extends": ["next/core-web-vitals", "next/typescript", "plugin:import/recommended"],
+  "plugins": ["simple-import-sort", "import"],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "import/no-anonymous-default-export": [
+      "warn",
+      {
+        "allowArray": false,
+        "allowArrowFunction": false,
+        "allowAnonymousClass": false,
+        "allowAnonymousFunction": false,
+        "allowCallExpression": true, // The true value here is for backward compatibility
+        "allowNew": false,
+        "allowLiteral": false,
+        "allowObject": false
+      }
+    ],
+    "react/display-name": 0,
+    "react/no-unescaped-entities": 0,
+    "import/named": 0,
+    "simple-import-sort/exports": "warn",
+    "import/no-unresolved": ["warn", { "commonjs": true, "amd": true }],
+    "import/namespace": "warn",
+    "import/default": "warn",
+    "import/export": "warn",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "warn",
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          // Packages. 'react' related packages come first
+          ["^react", "^next", "^@?\\w"],
+          // Feature-Sliced
+          ["^src/views/"],
+          ["^src/context/"],
+          ["^src/types/"],
+          ["^src/hooks/"],
+          ["^src/components/"],
+          ["^src/"],
+          ["^src/assets/illustrations/"],
+          ["^icons/"],
+          ["^src/_mock/"],
+          // Parent imports. Put .. last
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Other relative imports. Put same-folder imports and . last
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          // Translates imports
+          ["^.+\\.i18n$"],
+          // Package styles (e.g., from node_modules)
+          ["^@?\\w.*\\.s?css$"],
+          // Styles imports
+          ["^\\./.*\\.s?css$"]
+        ]
+      }
+    ]
+  }
+}
